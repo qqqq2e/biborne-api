@@ -4,6 +4,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import pickle
 
+import inspect
+if not hasattr(inspect, 'getargspec'):
+    inspect.getargspec = inspect.getfullargspec
+from invoke import task
 
 app = Flask(__name__)
 
